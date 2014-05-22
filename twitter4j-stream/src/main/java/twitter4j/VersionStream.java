@@ -33,6 +33,10 @@ public final class VersionStream {
     public static String getVersion() {
         return VERSION;
     }
+    
+    public static String getTitle() {
+        return TITLE;
+    }
 
     /**
      * prints the version string

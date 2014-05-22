@@ -80,6 +80,16 @@
                             </execution>
                         </executions>
                     </plugin>
+                    
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.17</version>
+                        <configuration>
+                          <skipTests>true</skipTests>
+                        </configuration>
+                    </plugin>
+                    
                 </plugins>
             </build>
         </profile>
@@ -117,6 +127,17 @@
             <version>2.5.6</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jdesktop</groupId>
+            <artifactId>beansbinding</artifactId>
+            <version>1.2.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.6</version>
+        </dependency>
     </dependencies>
     <build>
         <defaultGoal>install</defaultGoal>
@@ -148,6 +169,7 @@
                             </addDefaultSpecificationEntries>
                             <addDefaultImplementationEntries>true
                             </addDefaultImplementationEntries>
+                            <mainClass>twitter4j.TweetWindow</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
