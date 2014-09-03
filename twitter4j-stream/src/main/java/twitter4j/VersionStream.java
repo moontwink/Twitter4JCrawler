@@ -58,37 +58,10 @@ public final class VersionStream {
             @Override
             public void onStatus(Status status) {
                 
-                //Store Tweet in Database
-                /*
-                tweetModel tw = new tweetModel();
-                tw.setStatusId(String.valueOf(status.getId()));
-                tw.setUsername(status.getUser().getScreenName());
-                tw.setMessage(status.getText().toString());
-                
-                if(status.isRetweet()){
-                    tw.setRetweetCount(status.getRetweetedStatus().getRetweetCount());
-                    System.out.println("RT = " + status.getRetweetedStatus().getRetweetCount());
-                } else{
-                    tw.setRetweetCount(status.getRetweetCount());
-                }
-                
-                tw.setLatitude(status.getGeoLocation().latitude);
-                tw.setLonghitude(status.getGeoLocation().longitude);
-                tw.setDate(status.getCreatedAt().toGMTString());
-                
-                tw.setMessage(tweetHandler.RewriteTweet(tw.getMessage()));   //Rewrites Tweet for Emoji Statuses
-                tweetHandler.addTweet(tw);
-                */
-                
                 //Print Tweet
                 System.out.println("@" + status.getUser().getScreenName() + 
-//                        "\n..ID| " + status.getId() +
-//                        "\n.SRC| " + status.getSource() +
                         "\n..TW| " + status.getText() +
-//                        "\n..LL| " + status.getGeoLocation().getLatitude() + " " + status.getGeoLocation().getLongitude() +
-//                        "\n..PL| " + status.getPlace() +
                         "\n" );
-                
             }
 
             @Override
